@@ -1,4 +1,4 @@
-# Stuff ive used/looked at:
+# Resources:
 
 -[This arch forum post](https://bbs.archlinux.org/viewtopic.php?pid=2144012#p2144012) clued me into a more stable voltage that handles very gpu heavy games that were causing crashes on the settings from the original repo.
 
@@ -26,7 +26,7 @@ Good IMC: 1870-1900MHz
 Godlike IMC and modules: 1950MHz (Haven't seen a 2000MHz+ Micron card yet. 1950Mhz is highest I've seen, maybe just extremely rare too.)
 ```
 By this comment's information my card appears to have quite bad silicon despite being a supposedly overclock focused card. If you have this card maybe you're in the same position? 
-I got my clocks by using a stable voltage and clock speed of 1100 and 1905, then dividing 1905 by 1100 to get 1.73181818182, I then set my clock speed and divided it by 1.73181818182 and the voltages I've gotten have been stable.
+I got my clocks by using a stable voltage and clock speed of 1100 and 1905, then dividing 1905 by 1100 to get 1.73181818182, I then set my clock speed and divided it by 1.73181818182 and the voltages I've gotten have been stable. I cannot get a stable memory overclock.
 
 ## **Original author used these guides, that have since been taken down:**
 
