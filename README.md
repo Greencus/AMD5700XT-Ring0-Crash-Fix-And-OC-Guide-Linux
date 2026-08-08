@@ -1,5 +1,5 @@
-# AMD RX 5700 XT Ring0 Crash Fix for Linux
-Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, but may work elsewhere.
+# AMD RX 5700 XT Ring0 Crash Fix and safe overclock guide for Linux
+Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, but may work elsewhere. I will also be including overclock profiles and some information on clocking this card. 
 
 **Things to check first:**
 - GPU must have 2 dedicated power lanes, be sure there is not a loose cable.
