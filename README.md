@@ -5,6 +5,7 @@ Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, b
 - GPU must have 2 dedicated power lanes, be sure there is not a loose cable.
 - Check GPU fans for dust, check thermal paste, and just make sure the gpu isn't running into thermal issues.
 
+**LACT HAS MORE PROFILES FOR OVERCLOCKS**
 **STEPS TO FOLLOW (CoreCtrl):**
 - Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 iommu=pt amdgpu.gpu_recovery=1 amdgpu.runpm=0 amdgpu.mcbp=0 amdgpu.ppfeaturemask=0xf7fff'`
 - Run `sudo update-grub` and reboot.
