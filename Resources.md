@@ -1,6 +1,6 @@
 # Stuff ive used/looked at:
 
-
+-[This arch forum post](https://bbs.archlinux.org/viewtopic.php?pid=2144012#p2144012) clued me into a more stable voltage that handles very gpu heavy games that were causing crashes on the settings from the original repo.
 
 
 **Original author used these guides, that have since been taken down:**
