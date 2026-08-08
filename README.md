@@ -1,5 +1,5 @@
 # AMD RX 5700 XT Ring0 Crash Fix for Linux
-Guide for troubleshooting.
+Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, but may work elsewhere.
 
 **Things to check first:**
 - GPU must have 2 dedicated power lanes, be sure there is not a loose cable.
@@ -22,6 +22,7 @@ Guide for troubleshooting.
 - Start LACT daemon with `sudo systemctl enable --now lactd` and add it to boot with `sudo systemctl enable lactd` (Find the equivalent command for your INIT system)
 - Start LACT with GUI and change your profile to "Altered".
 - Modify the fan curve to your liking and apply.
+
 
 **For more information check [this Reddit thread](https://www.reddit.com/r/linuxquestions/comments/1lbbiwm/amd_radeon_rx_5700_xt_irregular_crashes_only/).**
 
