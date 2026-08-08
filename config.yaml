@@ -1,4 +1,4 @@
-version: 5
+version: 6
 daemon:
   log_level: info
   admin_group: wheel
@@ -20,24 +20,43 @@ gpus:
         80: 1.0
       spindown_delay_ms: 5000
       change_threshold: 2
-    power_cap: 160.0
+    power_cap: 210.0
     performance_level: manual
     max_core_clock: 1905
     max_memory_clock: 875
-    max_voltage: 1100
-    power_profile_mode_index: 0
-    power_states:
-      memory_clock:
-      - 0
-      - 1
-      - 2
-      - 3
-      core_clock:
-      - 0
-      - 1
-      - 2
+    max_voltage: 1000
+    gpu_vf_curve:
+      2:
+        voltage: 1100
+    power_profile_mode_index: 4
 profiles:
-  Altered:
+  Altered Original:
+    gpus:
+      [GPU ID]:
+        fan_control_enabled: true
+        fan_control_settings:
+          mode: curve
+          static_speed: 0.5
+          temperature_key: edge
+          interval_ms: 500
+          curve:
+            40: 0.3
+            50: 0.35
+            60: 0.5
+            67: 0.81
+            80: 1.0
+          spindown_delay_ms: 5000
+          change_threshold: 2
+        power_cap: 210.0
+        performance_level: high
+        max_core_clock: 1905
+        max_memory_clock: 875
+        max_voltage: 1000
+        gpu_vf_curve:
+          2:
+            voltage: 1000
+            clockspeed: 1905
+  Safe OC:
     gpus:
       [GPU ID]:
         fan_control_enabled: true
@@ -58,15 +77,64 @@ profiles:
         performance_level: manual
         max_core_clock: 1905
         max_memory_clock: 875
-        max_voltage: 1100
-        power_profile_mode_index: 1
-        power_states:
-          memory_clock:
-          - 1
-          - 2
-          - 3
-          core_clock:
-          - 1
-          - 2
-current_profile: Altered
+        max_voltage: 1000
+        gpu_vf_curve:
+          2:
+            voltage: 1175
+            clockspeed: 2035
+        power_profile_mode_index: 4
+  Higher OC:
+    gpus:
+      [GPU ID]:
+        fan_control_enabled: true
+        fan_control_settings:
+          mode: curve
+          static_speed: 0.5
+          temperature_key: edge
+          interval_ms: 500
+          curve:
+            40: 0.3
+            50: 0.35
+            60: 0.5
+            70: 0.75
+            80: 1.0
+          spindown_delay_ms: 5000
+          change_threshold: 2
+        power_cap: 210.0
+        performance_level: manual
+        max_core_clock: 1905
+        max_memory_clock: 875
+        max_voltage: 1000
+        gpu_vf_curve:
+          2:
+            voltage: 1200
+            clockspeed: 2078
+        power_profile_mode_index: 4
+  Altered Fork (same as default):
+    gpus:
+      [GPU ID]:
+        fan_control_enabled: true
+        fan_control_settings:
+          mode: curve
+          static_speed: 0.5
+          temperature_key: edge
+          interval_ms: 500
+          curve:
+            40: 0.3
+            50: 0.35
+            60: 0.5
+            70: 0.75
+            80: 1.0
+          spindown_delay_ms: 5000
+          change_threshold: 2
+        power_cap: 210.0
+        performance_level: manual
+        max_core_clock: 1905
+        max_memory_clock: 875
+        max_voltage: 1000
+        gpu_vf_curve:
+          2:
+            voltage: 1100
+        power_profile_mode_index: 4
+current_profile: Altered Fork (same as default)
 auto_switch_profiles: false
