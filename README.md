@@ -5,14 +5,13 @@ Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, b
 - GPU must have 2 dedicated power lanes, be sure there is not a loose cable.
 - Check GPU fans for dust, check thermal paste, and just make sure the gpu isn't running into thermal issues.
 
-## **LACT HAS MORE PROFILES FOR OVERCLOCKS**
-
+## Instructions
 **STEPS TO FOLLOW (CoreCtrl):**
 - Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 iommu=pt amdgpu.gpu_recovery=1 amdgpu.runpm=0 amdgpu.mcbp=0 amdgpu.ppfeaturemask=0xf7fff'`
 - Run `sudo update-grub` and reboot.
 - Now download [CoreCtrl](https://gitlab.com/corectrl/corectrl) and the file **FIX.ccpro** listed in this repository.
 - Follow [this guide](https://gitlab.com/corectrl/corectrl/-/wikis/Setup) to setup CoreCtrl.
-- Import **FIX.ccpro** in CoreCtrl's profile list.
+- Import **FIX.ccpro** in CoreCtrl's profile list. You may also do either of the overclock profiles, they are both safe, but one is lower voltage so that it hopefully damages the silicon less over time.
 - Modify the fan curve to your liking and apply.
 
 **STEPS TO FOLLOW (LACT):**
