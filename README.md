@@ -7,7 +7,7 @@ Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, b
 
 ## Instructions
 **STEPS TO FOLLOW (CoreCtrl):**
-- Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 iommu=pt amdgpu.gpu_recovery=1 amdgpu.runpm=0 amdgpu.mcbp=0 amdgpu.ppfeaturemask=0xf7fff'`
+- Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 amdgpu.gpu_recovery=1 amdgpu.ppfeaturemask=0xf7fff'`
 - Run `sudo update-grub` and reboot.
 - Now download [CoreCtrl](https://gitlab.com/corectrl/corectrl) and the file **FIX.ccpro** listed in this repository.
 - Follow [this guide](https://gitlab.com/corectrl/corectrl/-/wikis/Setup) to setup CoreCtrl.
@@ -15,7 +15,7 @@ Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, b
 - Modify the fan curve to your liking and apply.
 
 **STEPS TO FOLLOW (LACT):**
-- Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 iommu=pt amdgpu.gpu_recovery=1 amdgpu.runpm=0 amdgpu.mcbp=0 amdgpu.ppfeaturemask=0xf7fff'`
+- Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 amdgpu.gpu_recovery=1 amdgpu.ppfeaturemask=0xf7fff'`
 - Run `sudo update-grub` and reboot.
 - Now download [LACT](https://github.com/ilya-zlobintsev/LACT) and the file **config.yaml** listed in this repository.
 - Replace both instances of `[GPU ID]` in the config.yaml file with the ID that appears in the lact gui. The ID appears in the lact gui when you click the box that allows you to select your gpu, under your listed gpu will be the ID
