@@ -1,5 +1,5 @@
 # AMD RX 5700 XT Ring0 Crash Fix and safe overclock guide for Linux
-Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, but may work elsewhere. I will also be including overclock profiles and some information on clocking this card. With the original repo this is forked from, I still had crashes on some demanding games. I've finally managed to address that and get everything completely stable!!
+Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, but may work elsewhere. I will also be including overclock profiles and some information on clocking this card. With the original repo this is forked from, I still had crashes on some demanding games. I've finally managed to address that and get everything completely stable!! In [Resources.md](/Resources.md/) there is a table of silicon quality, my gpu appears to have bad silicon, so if original repo doesnt work for your gpu fully, you may be more stable with my settings. If not look at the chart to get an idea of things you could try.
 
 **Things to check first:**
 - GPU must have 2 dedicated power lanes, be sure there is not a loose cable.
