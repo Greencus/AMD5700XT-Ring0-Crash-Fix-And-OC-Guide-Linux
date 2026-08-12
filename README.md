@@ -7,7 +7,7 @@ Guide for troubleshooting. Specifically for the Gigabyte RX 5700 XT Gaming OC, b
 
 ## Instructions
 **STEPS TO FOLLOW (CoreCtrl):**
-- Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 amdgpu.gpu_recovery=1 amdgpu.ppfeaturemask=0xf7fff'`
+- Replace the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub with: `GRUB_CMDLINE_LINUX_DEFAULT='quiet splash amdgpu.noretry=0 amdgpu.lockup_timeout=0 amdgpu.gpu_recovery=1 amdgpu.ppfeaturemask=0xf7fff amdgpu.runpm=0 amdgpu.mcbp=0 iommu=pt pcie_aspm=off'`
 - Run `sudo update-grub` and reboot.
 - Now download [CoreCtrl](https://gitlab.com/corectrl/corectrl) and the file **FIX.ccpro** listed in this repository.
 - Follow [this guide](https://gitlab.com/corectrl/corectrl/-/wikis/Setup) to setup CoreCtrl.
